@@ -130,7 +130,7 @@
             </div>
             <!--<hr class="my-3">
             <div class="copyrights">
-                <p class="mb-0">&copy; Copyrights. All rights reserved. <a href="https://if.uinsgd.ac.id" class="text-black">if.uinsgd.ac.id</a></p>
+                <p class="mb-0">&copy; Copyrightss. All rights reserved. <a href="https://if.uinsgd.ac.id" class="text-black">if.uinsgd.ac.id</a></p>
             </div> -->
         </div>
     </footer>
