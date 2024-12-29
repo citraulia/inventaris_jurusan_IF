@@ -28,7 +28,7 @@ class informasi_barang_model extends Model
 
     public function getDipinjamkan()
     {
-        return $this->where(['barang_dipinjamkan' => 1])->findAll();
+        return $this->where(['barang_status' => 1, 'barang_dipinjamkan' => 1])->findAll();
     }
 
     public function createKode($kategori, $lokasi, $barang, $id)

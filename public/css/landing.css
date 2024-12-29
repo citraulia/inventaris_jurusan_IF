@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Navbar Styling */
+#custom-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background-color: #ffcc00;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#custom-navbar .navbar-brand {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#custom-navbar .navbar-brand img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+#custom-navbar .nav-link {
+    color: black;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+#custom-navbar .nav-link:hover {
+    color: #333;
+}
+
+#custom-navbar .navbar-toggler {
+    border-color: black;
+}
+
+#custom-navbar .navbar-toggler-icon {
+    background-color: black;
+}
+
+.landing-home {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(7, 7, 7, 0)), url(/img/home-page.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 15px;
+}
+
+.landing-home h1 {
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.landing-home p {
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.landing-home .btn {
+    background-color: black;
+    color: #ffc107; /* Warna teks kuning */
+    border-radius: 20px; /* Ujung tombol lebih tumpul */
+    padding: 10px 20px; /* Tambahkan padding untuk ukuran tombol */
+    border: none; /* Hilangkan border default */
+    font-size: 1rem; /* Ukuran font tombol */
+    text-transform: uppercase; /* Huruf kapital */
+    transition: background-color 0.3s ease; /* Animasi hover */
+}
+
+.landing-home .btn:hover {
+    background-color: #ffcc00; /* Latar belakang abu-abu saat hover */
+    color: #000; /* Tetap kuning saat hover */
+}
+
+/* CSS Section About */
+#about {
+    height: 100vh; /* Pastikan section About tetap penuh satu layar */
+    display: flex; /* Gunakan Flexbox untuk menyusun elemen */
+    align-items: center; /* Pusatkan elemen secara vertikal */
+}
+
+#about .container {
+    max-width: 90%; /* Atur lebar container agar lebih ramping */
+}
+
+#about h2 {
+    font-size: 2rem; /* Ukuran font heading */
+    margin-left: 60px;
+    margin-bottom: 20px; /* Jarak bawah heading */
+    text-align: left; /* Pastikan heading rata kiri */
+}
+
+#about p {
+    font-size: 1rem; /* Ukuran font paragraf */
+    line-height: 1.6; /* Jarak antar baris */
+    max-width: 80%; /* Lebar maksimal paragraf dipersempit */
+    margin: 0 auto; /* Pastikan teks tetap di tengah */
+    text-align: justify; /* Paragraf rata kiri dan kanan */
+}
+
+#about img {
+    max-width: 80%; /* Ukuran gambar diperkecil */
+    height: auto; /* Jaga proporsi gambar */
+    display: block; /* Pastikan gambar menjadi elemen blok */
+    margin: 0 auto; /* Pusatkan gambar */
+}
+
+#statistik {
+    min-height: 100vh; /* Section memenuhi tinggi layar penuh */
+    overflow: hidden;
+    display: flex; /* Gunakan Flexbox untuk mengatur posisi konten */
+    flex-direction: column; /* Susun konten secara vertikal */
+    justify-content: center; /* Pusatkan konten secara vertikal */
+    align-items: center; /* Pusatkan konten secara horizontal */
+    padding: 0 15px; /* Tambahkan sedikit padding di sisi kiri dan kanan */
+}
+
+#statistik h2 {
+    margin-top: 20px; /* Jarak atas untuk judul */
+    margin-bottom: 50px; /* Jarak bawah untuk judul */
+    font-size: 2rem; /* Ukuran font judul lebih besar */
+    text-align: center;
+}
+
+#statistik h5 {
+    margin-bottom: 30px; /* Jarak antara subjudul dengan canvas */
+    font-size: 1.2rem; /* Ukuran font subjudul */
+    text-align: center;
+}
+
+/* Diagram Batang */
+#kategoriChart {
+    max-width: 100%; /* Tidak ada perubahan ukuran */
+    height: auto; /* Menjaga proporsi */
+}
+
+/* Diagram Lingkaran */
+#keadaanChart {
+    max-width: 55%; /* Ukuran lebih kecil untuk diagram lingkaran */
+    height: auto; /* Menjaga proporsi */
+    margin: 0 auto; /* Memastikan diagram lingkaran terpusat */
+    display: block; /* Membuat canvas menjadi elemen blok */
+}
+
+footer {
+    background-color: #f7d217; /* Warna latar belakang */
+    color: #000; /* Warna teks */
+    padding: 40px 0; /* Tambahkan lebih banyak padding atas dan bawah */
+    margin-top: -20px; /* Tarik latar belakang lebih ke atas */
+    position: relative; /* Agar elemen tetap sesuai konteks */
+    z-index: 1;
+}
+
+footer .col-md-3 {
+    margin-right: 30px !important;
+    flex: 0 0 30%; /* Atur lebar kolom jadi 35% */
+    max-width: 30%;
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul li {
+    font-size: 0.95rem; /* Atur ukuran font lebih kecil */
+}
+
+footer img {
+    max-height: 50px; /* Tinggi maksimum logo */
+}
+
+footer .list-unstyled li {
+    margin-bottom: 5px;
+}

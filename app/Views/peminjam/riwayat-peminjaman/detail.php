@@ -91,7 +91,7 @@ function getBarang($kode)
                                             <th>Nama</th>
                                             <th>Merk</th>
                                             <th>Keadaan</th>
-                                            <th>Lokasi</th>
+                                            <th>Status Pengajuan Barang</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -102,7 +102,7 @@ function getBarang($kode)
                                             <th>Nama</th>
                                             <th>Merk</th>
                                             <th>Keadaan</th>
-                                            <th>Lokasi</th>
+                                            <th>Status Pengajuan Barang</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </tfoot>
@@ -117,7 +117,19 @@ function getBarang($kode)
                                                 <td><?= $barangPinjaman['barang_nama']; ?></td>
                                                 <td><?= $barangPinjaman['barang_merk']; ?></td>
                                                 <td><?= $barangPinjaman['barang_keadaan']; ?></td>
-                                                <td><?= $barangPinjaman['lokasi_fk']; ?></td>
+                                                <td>
+                                                    <?php if (isset($barang['status_barang'])): ?>
+                                                        <?php if ($barang['status_barang'] == 1): ?>
+                                                            <span class="badge badge-success">Disetujui</span>
+                                                        <?php elseif ($barang['status_barang'] == 0): ?>
+                                                            <span class="badge badge-danger">Ditolak</span>
+                                                        <?php else: ?>
+                                                            <span class="badge badge-warning">Pending</span>
+                                                        <?php endif; ?>
+                                                    <?php else: ?>
+                                                        <span class="badge badge-secondary">Tidak Ada Status</span>
+                                                    <?php endif; ?>
+                                                </td>
                                                 <td>
                                                     <div class="btn-group btn-block">
                                                         <a href="<?= base_url('peminjam/barangpinjaman/' . $barangPinjaman['barang_kode']); ?>" class="btn btn-info">Detail</a>

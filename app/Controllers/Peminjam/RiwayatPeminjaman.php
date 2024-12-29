@@ -71,7 +71,7 @@ class RiwayatPeminjaman extends BaseController
             'title' => 'Riwayat Peminjaman | Detail Peminjaman',
             'informasiBarang' => $this->informasiBarangModel,
             'transaksiPeminjaman' => $transaksi,
-            'kumpulanBarang' => $this->kumpulanBarangModel->getKumpulanBarang($id),
+            'kumpulanBarang' => $this->kumpulanBarangModel->where('transaksi_fk', $id)->findAll(),
         ];
 
         return view('peminjam/riwayat-peminjaman/detail', $data);

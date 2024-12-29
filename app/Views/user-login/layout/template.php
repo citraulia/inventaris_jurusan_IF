@@ -9,10 +9,16 @@
     <meta name="author" content="" />
     <title><?= $title; ?></title>
     <link href="<?= base_url('css/styles.css'); ?>" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="<?= base_url('img/logo_sakti.png'); ?>" sizes="32x32">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-<?= $background; ?>">
+<?php
+$url = $_SERVER['REQUEST_URI'];
+$bgClass = (strpos($url, 'jurusanlogin') !== false) ? 'bg-jurusan' : 'bg-peminjam';
+?>
+<body class="<?= $bgClass; ?>">
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
 

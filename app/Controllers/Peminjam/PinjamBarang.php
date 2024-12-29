@@ -65,6 +65,7 @@ class PinjamBarang extends BaseController
             'peminjam_fk' => session('username'),
             'tanggal_peminjaman' => $this->request->getVar('pinjam'),
             'tanggal_pengembalian' => $this->request->getVar('kembali'),
+            'jurusan_fk' => 'ketuajurusan',
         ]);
 
         $idTransaksi = $this->transaksiPeminjamanModel->getInsertID();

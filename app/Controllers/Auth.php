@@ -61,7 +61,7 @@ class Auth extends BaseController
                 'username' => $row->user_username,
                 'slug' => $row->user_slug,
                 'role' => 'Jurusan',
-                'level' => $row->user_level,
+                'user_level' => $row->user_level,
             );
             session()->set($data);
             session()->setFlashdata('pesan', 'Berhasil Login');

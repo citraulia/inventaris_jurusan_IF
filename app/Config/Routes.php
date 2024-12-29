@@ -31,6 +31,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+$routes->get('/', 'LandingPage::index');
 $routes->get('login', 'UserLogin::index');
 $routes->get('jurusanlogin', 'UserLogin::jurusanLogin');
 $routes->get('register', 'UserLogin::register');
@@ -92,6 +93,11 @@ $routes->get('jurusan/userpeminjam/edit/(:segment)', 'Jurusan\UserPeminjam::edit
 $routes->delete('jurusan/userpeminjam/(:num)', 'Jurusan\UserPeminjam::delete/$1');
 $routes->get('jurusan/userpeminjam/(:any)', 'Jurusan\UserPeminjam::detail/$1');
 // End User Peminjam Manu
+
+// setujui dan tolak barang per baris
+$routes->post('jurusan/riwayatpeminjamanbarang/setujuiBarang', 'Jurusan\RiwayatPeminjamanBarang::setujuiBarang');
+$routes->post('jurusan/riwayatpeminjamanbarang/tolakBarang', 'Jurusan\RiwayatPeminjamanBarang::tolakBarang');
+// setujui dan tolak barang per baris
 
 /*
  * --------------------------------------------------------------------

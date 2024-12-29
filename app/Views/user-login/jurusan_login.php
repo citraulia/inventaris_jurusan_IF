@@ -37,7 +37,7 @@
                                 <input type="password" class="form-control py-4" id="password" name="password" placeholder="Masukan password Anda" />
                             </div>
                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                <a class="small" href="/">Peminjam Login</a>
+                                <a class="small" href="login">Peminjam Login</a>
                                 <button type="submit" class="btn btn-primary" href="#">Login</button>
                             </div>
                         </form>

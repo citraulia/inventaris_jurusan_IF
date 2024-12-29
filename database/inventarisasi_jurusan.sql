@@ -266,6 +266,9 @@ CREATE TABLE `kumpulan_barang_dipinjam` (
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+ALTER TABLE `kumpulan_barang_dipinjam`
+ADD COLUMN `status_barang` TINYINT DEFAULT 2;
+
 --
 -- Dumping data for table `kumpulan_barang_dipinjam`
 --
@@ -388,7 +391,7 @@ CREATE TABLE `user_jurusan` (
 --
 
 INSERT INTO `user_jurusan` (`user_id`, `user_nama`, `user_slug`, `user_nip`, `user_posisi`, `user_username`, `user_password`, `user_level`, `created_at`, `updated_at`) VALUES
-(1, 'Cepy Slamet, ST., M.Kom.', 'ketuajurusan', '198002252011011007', 'Ketua Jurusan', 'ketuajurusan', 'ketuajurusan', 1, '2022-02-06 11:53:49', '2022-02-28 17:08:38'),
+(1, 'Dian Saadillah Maylawati, S.Kom., MT., Ph.D', 'ketuajurusan', '198002252011011007', 'Ketua Jurusan', 'ketuajurusan', 'ketuajurusan', 1, '2022-02-06 11:53:49', '2022-02-28 17:08:38'),
 (2, 'Agung Wahana, M.T., S.E.', 'sekretarisjurusan', '197305312009011003', 'Sekretaris Jurusan', 'sekretarisjurusan', 'sekretarisjurusan', 2, '2022-02-06 11:53:49', '2022-02-28 06:32:13'),
 (5, 'Admin Pertama', 'admin', '0000', 'Admin Jurusan', 'admin', 'adminadmin', 3, '2022-02-06 04:56:47', '2022-02-28 10:40:08'),
 (6, 'Admin Kedua', 'admindua', '1123213', 'Admin Jurusan', 'admindua', 'admindua', 3, '2022-02-06 05:09:25', '2022-02-28 06:26:11'),
